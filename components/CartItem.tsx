@@ -1,19 +1,39 @@
-import { View, Text, Button } from 'react-native';
-import { Product } from '../types/product';
+import { View, Text, Pressable } from 'react-native';
+import { CartItem as CartItemType } from '../types/cartItem';
 
 type Props = {
-  item: Product;
+  item: CartItemType;
   onRemove: () => void;
+  onRemoveAll: () => void;
 };
 
-export default function CartItem({ item, onRemove }: Props) {
+export default function CartItem({ item, onRemove, onRemoveAll }: Props) {
   return (
-    <View className="mb-2 p-2 border rounded bg-white flex-row items-center justify-between">
-      <View>
-        <Text className="font-semibold">{item.productName}</Text>
-        <Text className="text-sm text-gray-600">${item.price}</Text>
+    <View className="mb-2 p-3 border rounded-lg bg-white">
+      <View className="flex-row justify-between items-center">
+        <Text className="font-semibold text-base">
+          📦 {item.product.productName} x{item.quantity}
+        </Text>
+        <Text className="text-sm text-gray-800">
+          💰 ${item.product.price * item.quantity}
+        </Text>
       </View>
-      <Button title="Remove" color="red" onPress={onRemove} />
+
+      <View className="flex-row gap-2 mt-2">
+        <Pressable
+          onPress={onRemove}
+          className="px-3 py-1 bg-red-500 rounded-full"
+        >
+          <Text className="text-white text-sm font-medium">Remove One</Text>
+        </Pressable>
+
+        <Pressable
+          onPress={onRemoveAll}
+          className="px-3 py-1 bg-red-700 rounded-full"
+        >
+          <Text className="text-white text-sm font-medium">Remove All</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
