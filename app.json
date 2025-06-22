@@ -3,36 +3,39 @@
     "name": "MiniTask",
     "slug": "MiniTask",
     "version": "1.0.0",
-
     "web": {
       "favicon": "./assets/favicon.png"
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
     "plugins": [],
-
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#8eb4ff"
+      },
+      "package": "com.charlessherwin.MiniTask"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "851f95f2-fa94-4b36-9852-0f030004493a"
       }
-    }
+    },
+    "owner": "charlessherwin"
   }
 }
