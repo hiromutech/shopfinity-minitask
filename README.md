@@ -50,6 +50,6 @@ npm install
 # or
 yarn install
 
-### 1. Run the Application
+### 2. Run the Application
 
 npx expo start
