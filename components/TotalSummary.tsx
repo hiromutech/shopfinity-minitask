@@ -1,4 +1,5 @@
 import { View, Text } from 'react-native';
+import ShopfinityText from './ShopfinityText';
 
 type Props = {
   total: number;
@@ -8,12 +9,12 @@ type Props = {
 
 export default function TotalSummary({ total, discounted, isVoucherApplied }: Props) {
   return (
-    <View className="mt-4">
-      <Text className="text-lg font-bold">Total: ${total.toFixed(2)}</Text>
+    <View className="mt-4 rounded-xl bg-white p-5">
+      <ShopfinityText className="text-lg">Total: ${total.toFixed(2)}</ShopfinityText>
       {isVoucherApplied && (
-        <Text className="text-lg font-bold text-green-700">
+        <ShopfinityText className="text-lg text-green-700">
           Discounted Total: ${discounted.toFixed(2)}
-        </Text>
+        </ShopfinityText>
       )}
     </View>
   );
