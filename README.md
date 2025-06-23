@@ -37,8 +37,7 @@ The app includes **4 pre-defined static products**, each with:
 | [React Native](https://reactnative.dev/) | Cross-platform mobile development |
 | [Expo](https://expo.dev/) | Easy setup & build toolchain |
 | [NativeWind](https://www.nativewind.dev/) | Utility-first styling |
-| [React Hooks](https://reactjs.org/docs/hooks-intro.html) | State management |
-| [TypeScript](https://www.typescriptlang.org/) *(optional)* | Type safety (if applicable) |
+| [TypeScript](https://www.typescriptlang.org/)  | Type safety |
 
 ---
 
@@ -50,3 +49,7 @@ The app includes **4 pre-defined static products**, each with:
 npm install
 # or
 yarn install
+
+### 1. Run the Application
+
+npx expo start
