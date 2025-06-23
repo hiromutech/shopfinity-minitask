@@ -49,7 +49,11 @@ The app includes **4 pre-defined static products**, each with:
 npm install
 # or
 yarn install
+```
 
 ### 2. Run the Application
 
+```bash
 npx expo start
+```
+
