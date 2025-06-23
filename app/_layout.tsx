@@ -1,13 +1,11 @@
 import 'global.css';
 import { useFonts } from 'expo-font';
-import { SplashScreen } from 'expo-router';
-import { Tabs } from 'expo-router';
+import { SplashScreen, Tabs } from 'expo-router';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { CartProvider } from '../context/CartContext';
 import { useEffect } from 'react';
-import { Text } from 'react-native';
 
 export default function Layout() {
   const [fontsLoaded] = useFonts({
@@ -17,12 +15,12 @@ export default function Layout() {
 
   useEffect(() => {
     if (fontsLoaded) {
-      SplashScreen.hideAsync(); // Optional: hides splash screen when ready
+      SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
 
   if (!fontsLoaded) {
-    return null; // or a loading indicator
+    return null;
   }
 
   return (
@@ -39,7 +37,6 @@ export default function Layout() {
             tabBarActiveTintColor: '#FF385C',
             tabBarInactiveTintColor: 'gray',
           })}
-          
         />
         <Toast />
       </CartProvider>

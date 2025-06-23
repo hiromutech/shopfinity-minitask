@@ -28,7 +28,7 @@ export default function CartScreen() {
 
   return (
     <>
-      <View className=" w-full bg-[#FF385C] pb-5 pl-3 pt-10">
+      <View className=" w-full bg-[#FF385C] py-5 pl-3 ">
         <ShopfinityText className="text-2xl font-semibold text-white">Cart</ShopfinityText>
       </View>
       <ScrollView contentContainerStyle={{ padding: 20 }}>
